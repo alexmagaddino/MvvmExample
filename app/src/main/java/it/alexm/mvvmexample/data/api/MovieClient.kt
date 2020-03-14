@@ -1,4 +1,4 @@
-package it.alexm.mvvmexample.single_movie_details.data.api
+package it.alexm.mvvmexample.data.api
 
 import it.alexm.mvvmexample.BuildConfig
 import okhttp3.Interceptor

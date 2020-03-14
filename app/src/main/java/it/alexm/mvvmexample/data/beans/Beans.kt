@@ -1,4 +1,4 @@
-package it.alexm.mvvmexample.single_movie_details.data.beans
+package it.alexm.mvvmexample.data.beans
 import com.google.gson.annotations.SerializedName
 
 
