@@ -38,6 +38,7 @@ class MovieDetailNetworkDataSource(
                         _downloadMovieDetail.postValue(it)
                         _networkState.postValue(NetworkState.Success("Apposto"))
                     }, {
+                        it.printStackTrace()
                         _networkState.postValue(NetworkState.Error("Apposto ta minkia"))
                     })
             )

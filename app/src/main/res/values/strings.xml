@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MvvmExample</string>
     <string name="error">We have a problem!</string>
+    <string name="push_me">Premimi</string>
 </resources>

@@ -15,6 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:progressBackgroundTint="@android:color/holo_red_dark"
             android:visibility="gone" />
 
         <TextView
@@ -193,17 +194,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        tools:text="Overview "
                         android:textSize="12sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:text="Overview " />
 
                     <TextView
                         android:id="@+id/movie_overview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        tools:text="overview ........."
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        tools:text="overview ........." />
 
                 </LinearLayout>
 

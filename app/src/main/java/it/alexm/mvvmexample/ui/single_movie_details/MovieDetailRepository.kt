@@ -1,4 +1,4 @@
-package it.alexm.mvvmexample.single_movie_details
+package it.alexm.mvvmexample.ui.single_movie_details
 
 import androidx.lifecycle.LiveData
 import io.reactivex.disposables.CompositeDisposable

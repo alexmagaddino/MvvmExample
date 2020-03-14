@@ -15,7 +15,7 @@ object MovieClient {
             val url = chain.request()
                 .url()
                 .newBuilder()
-                .addQueryParameter("api_key", BuildConfig.MOVIE_HOST)
+                .addQueryParameter("api_key", BuildConfig.API_KEY)
                 .build()
 
             val request =  chain.request()

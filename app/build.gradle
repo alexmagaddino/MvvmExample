@@ -20,14 +20,14 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "MOVIE_HOST", '"https://api.themoviedb.org/3"'
-            buildConfigField "String", "POSTER_HOST", '"https://image.tmdb.org/t/p/w342"'
+            buildConfigField "String", "MOVIE_HOST", '"https://api.themoviedb.org/3/"'
+            buildConfigField "String", "POSTER_HOST", '"https://image.tmdb.org/t/p/w342/"'
             buildConfigField "String", "API_KEY", '"6a1d09bf673e61f6303ba44b80254ce6"'
         }
 
         debug {
-            buildConfigField "String", "MOVIE_HOST", '"https://api.themoviedb.org/3"'
-            buildConfigField "String", "POSTER_HOST", '"https://image.tmdb.org/t/p/w342"'
+            buildConfigField "String", "MOVIE_HOST", '"https://api.themoviedb.org/3/"'
+            buildConfigField "String", "POSTER_HOST", '"https://image.tmdb.org/t/p/w342/"'
             buildConfigField "String", "API_KEY", '"6a1d09bf673e61f6303ba44b80254ce6"'
         }
     }
