@@ -36,10 +36,10 @@ class MovieDetailNetworkDataSource(
                     .subscribeOn(Schedulers.io())
                     .subscribe({
                         _downloadMovieDetail.postValue(it)
-                        _networkState.postValue(NetworkState.Success("Apposto"))
+                        _networkState.postValue(NetworkState.Success)
                     }, {
                         it.printStackTrace()
-                        _networkState.postValue(NetworkState.Error("Apposto ta minkia"))
+                        _networkState.postValue(NetworkState.Error)
                     })
             )
 

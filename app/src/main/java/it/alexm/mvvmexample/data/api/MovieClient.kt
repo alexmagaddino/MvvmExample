@@ -10,6 +10,9 @@ import java.util.concurrent.TimeUnit
 
 object MovieClient {
 
+    const val FIRST_PAGE = 1
+    const val MOVIE_PER_PAGE = 20
+
     fun getClient(): MovieDbInterface {
         val requestInterceptor = Interceptor { chain ->
             val url = chain.request()

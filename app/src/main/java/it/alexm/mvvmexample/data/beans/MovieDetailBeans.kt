@@ -1,6 +1,6 @@
 package it.alexm.mvvmexample.data.beans
-import com.google.gson.annotations.SerializedName
 
+import com.google.gson.annotations.SerializedName
 
 
 /**

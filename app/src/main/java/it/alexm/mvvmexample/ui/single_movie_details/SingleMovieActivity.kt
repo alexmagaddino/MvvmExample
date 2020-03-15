@@ -1,19 +1,16 @@
 package it.alexm.mvvmexample.ui.single_movie_details
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View.GONE
-import android.view.View.VISIBLE
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
 import it.alexm.mvvmexample.BuildConfig
 import it.alexm.mvvmexample.R
 import it.alexm.mvvmexample.data.api.MovieClient
 import it.alexm.mvvmexample.data.beans.MovieDetailBean
-import it.alexm.mvvmexample.data.repository.NetworkState
+import it.alexm.mvvmexample.data.setVisible
 import kotlinx.android.synthetic.main.activity_single_movie.*
 import java.text.NumberFormat
 import java.util.*
@@ -38,8 +35,8 @@ class SingleMovieActivity : AppCompatActivity() {
         })
 
         viewModel.movieDetailNetworkState.observe(this, Observer {
-            progress_bar.visibility = if (it is NetworkState.Loading) VISIBLE else GONE
-            txt_error.visibility = if (it is NetworkState.Error) VISIBLE else GONE
+            progress_bar.setVisible(it.isLoading())
+            txt_error.setVisible(it.isError())
         })
     }
 
@@ -62,12 +59,11 @@ class SingleMovieActivity : AppCompatActivity() {
     }
 
     private fun getViewModel(movieId: Int): SingleMovieViewModel {
-//        return ViewModelProvider(this).get(SingleMovieViewModel::class.java)
         return ViewModelProvider(this, object : ViewModelProvider.Factory {
             @Suppress("UNCHECKED_CAST")
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {
                 return SingleMovieViewModel(movieDetailRepository, movieId) as T
             }
-        })[SingleMovieViewModel::class.java]
+        }).get(SingleMovieViewModel::class.java)
     }
 }
