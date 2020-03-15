@@ -18,9 +18,7 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name="it.alexm.mvvmexample.ui.single_movie_details.SingleMovieActivity"
-            android:screenOrientation="portrait" />
+        <activity android:name="it.alexm.mvvmexample.ui.single_movie_details.SingleMovieActivity" />
     </application>
 
 </manifest>

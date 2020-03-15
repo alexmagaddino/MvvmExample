@@ -15,7 +15,6 @@ import it.alexm.mvvmexample.data.beans.MovieResult
 import it.alexm.mvvmexample.data.repository.NetworkState
 import it.alexm.mvvmexample.data.setVisible
 import it.alexm.mvvmexample.ui.single_movie_details.SingleMovieActivity
-import kotlinx.android.synthetic.main.activity_single_movie.view.*
 import kotlinx.android.synthetic.main.layout_movie_item.view.*
 import kotlinx.android.synthetic.main.network_state_item.view.*
 
@@ -25,8 +24,8 @@ class MovieListAdapter(private val context: Context) :
     private var networkstate: NetworkState? = null
 
     companion object {
-        private const val MOVIE_TYPE = 1
-        private const val NETWORK_TYPE = 1
+        const val MOVIE_TYPE = 1
+        const val NETWORK_TYPE = 1
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =
@@ -69,7 +68,7 @@ class MovieListAdapter(private val context: Context) :
 
     private inner class MovieItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(movie: MovieResult?, context: Context) {
-            itemView.movie_title.text = movie?.title
+            itemView.item_movie_title.text = movie?.title
             itemView.item_movie_release_year.text = movie?.releaseDate
 
             Glide.with(itemView.context)
